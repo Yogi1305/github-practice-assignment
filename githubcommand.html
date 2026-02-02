@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Commands Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f6f8fa;
+        }
+        h1 {
+            color: #24292e;
+            border-bottom: 3px solid #0366d6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0366d6;
+            margin-top: 30px;
+        }
+        .command {
+            background: white;
+            border-left: 4px solid #0366d6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .command-name {
+            font-weight: bold;
+            color: #24292e;
+            font-size: 16px;
+        }
+        code {
+            background: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .usage {
+            margin: 10px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Commands - Developer Guide</h1>
+
+    <h2>1. Initial Setup</h2>
+    <div class="command">
+        <div class="command-name">Configure Git Identity</div>
+        <code>git config --global user.name "Your Name"</code><br>
+        <code>git config --global user.email "your@email.com"</code>
+        <div class="usage">Sets your name and email for all commits on your machine.</div>
+    </div>
+
+    <h2>2. Repository Basics</h2>
+    <div class="command">
+        <div class="command-name">Initialize Repository</div>
+        <code>git init</code>
+        <div class="usage">Creates a new Git repository in the current directory.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Clone Repository</div>
+        <code>git clone &lt;repository-url&gt;</code>
+        <div class="usage">Downloads a repository from GitHub to your local machine.</div>
+    </div>
+
+    <h2>3. Staging & Committing</h2>
+    <div class="command">
+        <div class="command-name">Check Status</div>
+        <code>git status</code>
+        <div class="usage">Shows modified files and staging area status.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Stage Files</div>
+        <code>git add &lt;filename&gt;</code><br>
+        <code>git add .</code>
+        <div class="usage">Stages specific file or all changes for commit.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Commit Changes</div>
+        <code>git commit -m "Your commit message"</code>
+        <div class="usage">Creates a snapshot of staged changes with a message.</div>
+    </div>
+
+    <h2>4. Branches</h2>
+    <div class="command">
+        <div class="command-name">List Branches</div>
+        <code>git branch</code><br>
+        <code>git branch -a</code>
+        <div class="usage">Lists local branches or all branches (including remote).</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Create Branch</div>
+        <code>git branch &lt;branch-name&gt;</code>
+        <div class="usage">Creates a new branch from current branch.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Switch Branch</div>
+        <code>git checkout &lt;branch-name&gt;</code><br>
+        <code>git switch &lt;branch-name&gt;</code>
+        <div class="usage">Switches to an existing branch.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Create & Switch Branch</div>
+        <code>git checkout -b &lt;branch-name&gt;</code><br>
+        <code>git switch -c &lt;branch-name&gt;</code>
+        <div class="usage">Creates and switches to a new branch in one command.</div>
+    </div>
+
+    <h2>5. Remote Operations</h2>
+    <div class="command">
+        <div class="command-name">Add Remote</div>
+        <code>git remote add origin &lt;repository-url&gt;</code>
+        <div class="usage">Connects your local repo to GitHub repository.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Push Changes</div>
+        <code>git push origin &lt;branch-name&gt;</code>
+        <div class="usage">Uploads commits to GitHub repository.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Pull Changes</div>
+        <code>git pull origin &lt;branch-name&gt;</code>
+        <div class="usage">Downloads and merges latest changes from GitHub.</div>
+    </div>
+
+    <h2>6. Merging</h2>
+    <div class="command">
+        <div class="command-name">Merge Branch</div>
+        <code>git merge &lt;branch-name&gt;</code>
+        <div class="usage">Merges specified branch into current branch.</div>
+    </div>
+
+    <h2>7. History & Diff</h2>
+    <div class="command">
+        <div class="command-name">View Commit History</div>
+        <code>git log</code><br>
+        <code>git log --oneline</code>
+        <div class="usage">Shows commit history. --oneline shows compact view.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">View Changes</div>
+        <code>git diff</code><br>
+        <code>git diff &lt;branch1&gt; &lt;branch2&gt;</code>
+        <div class="usage">Shows differences between working directory or branches.</div>
+    </div>
+
+    <h2>8. Undo Changes</h2>
+    <div class="command">
+        <div class="command-name">Undo Staged Changes</div>
+        <code>git reset &lt;filename&gt;</code>
+        <div class="usage">Removes file from staging area.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Discard Changes</div>
+        <code>git checkout -- &lt;filename&gt;</code>
+        <div class="usage">Discards changes in working directory.</div>
+    </div>
+
+    <div class="command">
+        <div class="command-name">Undo Last Commit</div>
+        <code>git revert HEAD</code>
+        <div class="usage">Creates new commit that undoes last commit.</div>
+    </div>
+
+</body>
+</html>
